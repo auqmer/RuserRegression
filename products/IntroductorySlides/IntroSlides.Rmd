@@ -1,0 +1,50 @@
+---
+title: "Introduction to Regression in R"
+author: "William Murrah"
+date: "6/25/2021"
+output: ioslides_presentation
+increment: true
+widescreen: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Goals for Today
+
+> 1. QMER sales pitch
+> 2. Goals of R User Group: Regression
+> 3. Introduction to linear models in R
+> 4. Accessing materials 
+> 5. Goals for next meeting
+
+
+## Quantitative Methods in Educational Research (QMER)
+
+> 1. QMER is a learning community
+> 2. QMER provides access to large data sets
+> 3. QMER provides skills in using computational methods
+
+
+## Why do we need resources like QMER?
+
+> 1. Society is changing
+> 2. Jobs are changing
+> 3. Science is changing
+> 4. Research methods are changing
+
+> * What do all these have in common?
+
+> * Complexity!
+
+## Goals the R User Group: Regression
+
+> * To provide technical skills in using linear models in R
+> * **NOT** going to teach much theory (get that in your courses)
+> * **BUT** will talk about how my approach may differn for your courses
+> * Which is essentially, I take a model building approach to science
+
+> * This will be an informal meeting
+> * I assume you have R and Rstudio installed
+> * I need volunteers to send data sets you are using in classes, which we will use in our meetings
