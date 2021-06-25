@@ -48,3 +48,7 @@ knitr::opts_chunk$set(echo = FALSE)
 > * This will be an informal meeting
 > * I assume you have R and Rstudio installed
 > * I need volunteers to send data sets you are using in classes, which we will use in our meetings
+
+## Link to materials
+
+https://github.com/auqmer/RuserRegression
