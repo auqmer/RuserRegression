@@ -3,7 +3,7 @@
 # Description: Model to predict gas mileage using Motor Trends data
 
 library(psych)
-
+library(texreg)
 data("mtcars")
 
 # create categorical variables
@@ -36,6 +36,30 @@ anova(mod0, modwt)
 
 modhp <- lm(mpg ~ hp, data = cars)
 modwthp <- lm(mpg ~ wt + hp, data = cars)
-
+modwthp_2 <- lm(mpg ~ poly(wt, 2,raw=TRUE)+ hp, data = cars)
 summary(modhp)
 summary(modwthp)
+summary(modwthp_2)
+screenreg(list(mod0, modwt, modhp, modwthp))
+
+plot(resid(modwthp) ~ predict(modwthp))
+abline(h = 0)
+
+plot(resid(modwthp) ~ wt, data = cars)
+abline(h=0)
+plot(resid(modwthp) ~ hp, data = cars)
+abline(h=0)
+plot(resid(modwthp_2) ~ predict(modwthp_2))
+abline(h=0)
+
+hist(resid(modwthp))
+hist(resid(modwthp_2))
+
+modam <- lm(mpg ~ am, cars)
+summary(modam)
+
+modcyl <- lm(mpg ~ cyl, data = cars)
+summary(modcyl)
+
+modwha <- lm(mpg ~ poly(wt,2,raw=TRUE) + hp + am, data = cars)
+summary(modwha)
