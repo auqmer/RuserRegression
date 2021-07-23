@@ -1,0 +1,20 @@
+% Encoding: UTF-8
+
+@article{henderson1981building,
+  title={Building multiple regression models interactively},
+  author={Henderson, Harold V and Velleman, Paul F},
+  journal={Biometrics},
+  pages={391--411},
+  year={1981},
+  publisher={JSTOR}
+}
+
+@Manual{Revelle2021psych,
+    title = {psych: Procedures for Psychological, Psychometric, and Personality Research},
+    author = {William Revelle},
+    organization = { Northwestern University},
+    address = { Evanston, Illinois},
+    year = {2021},
+    note = {R package version 2.1.6},
+    url = {https://CRAN.R-project.org/package=psych},
+  }

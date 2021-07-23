@@ -1,0 +1,43 @@
+---
+title: "Predicting Gas Mileage"
+author: "William Murrah"
+date: "7/23/2021"
+csl: apa.csl
+bibliography: mileage.bib
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(psych)
+library(modelsummary)
+```
+
+The purpose of this report is to generate a predictive model that can be use to budget company expenses for employee gas mileage reimbursement.
+Data from @henderson1981building were used to build the model, which contained data on 32 automobiles, and originally contained 11 variables. 
+A subset of six variables was selected for model building, which included the outcome variable miles per gallon (`mpg`) and 5 additional characteristics: number of cylinders (`cyl`), horse power (`hp`), weight in 1,000 pounds (`wt`), engine shape (`vs` either V-shaped or straight), and transmission type (`am`, either automatic or manual).
+Graphical displays of these data are given in Figure 1, while descriptive statistics are in Table 1 and Table 2.
+Figure 1 is a scatterplot matrix [@Revelle2021psych], and indicates that all of the predictors are correlated with the outcome variable.
+
+
+```{r}
+source("code/cleanCarsdata_GasMileageModels.R")
+```
+
+```{r, fig.cap="Figure 1: Scatterplot Matrix of Cars Variables"}
+pairs.panels(cars, smooth = FALSE, ellipses = FALSE)
+```
+
+
+```{r}
+datasummary_skim(data = cars, title="Table 1: Descriptive Statistics of numeric variables")
+```
+
+```{r}
+datasummary_skim(data = cars, type="categorical", title= "Table 2: Descriptive statistics of categorical variablrs")
+```
+
+
+
+
+# References
